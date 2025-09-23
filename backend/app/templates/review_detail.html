@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <article>
+    <h1>{{ review.artist }} - {{ review.album }}</h1>
+    <p><strong>Rating:</strong> {{ review.rating }}/10</p>
+    <img src="{{ review.cover_url }}" alt="Album cover" style="max-width:200px;">
+    <p>{{ review.body }}</p>
+    <a href="{{ url_for('public.home') }}">Back to reviews</a>
+  </article>
+{% endblock %}
